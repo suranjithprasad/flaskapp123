@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Table List</h2>
+<table align="center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>
+
+                <form action="/delete/{{ row[0] }}" method="post">
+                <input type="submit" value="Delete">
+
+            </form>
+
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th>{{ data|length }}</th>
+            <th>Names are saved</th>
+        </tr>
+    </tbody>
+</table>
+<h3><a href="/">add a Name</h3>
+{% endblock %}

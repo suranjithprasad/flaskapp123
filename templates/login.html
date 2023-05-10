@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex align-items-center vh-100">
+    <div class="col-md-4 col-sm-12 mx-auto">
+        <h1 class="text-center mb-4">Members Login</h1>
+        <form action="/logindone" method="post" class="bg-danger p-3">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <h3 class="text-center mt-3" ><a style="font-weight: bold; color: red;" href="/register">Register</a></h3>
+    </div>
+</div>
+{% endblock %}
+

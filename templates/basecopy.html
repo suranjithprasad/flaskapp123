@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style type="text/css">
+        body {
+            background-color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+<div class="row">
+  <div class="p-4">
+    <div class="jumbotron text-center bg-light border shadow">
+  <h1 class="display-4">WELCOME TO <span class="text-primary">EGOTECH</span> WEB PROJECTS</h1>
+  <p class="lead">Place your requirements after Registration or Login</p>
+</div>
+
+    <div class="row">
+      <div class="col-md-12 float-center">
+        <div class="image-container" style="height: auto;">
+        <img class="w-100" src="{{ url_for('static', filename='images/homepage.png') }}" alt="Image description">
+      </div></div>
+    </div>
+  </div>
+</div>
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+        <h1>Welcome to our landing page!</h1>
+        <p>We offer amazing services for your needs. Log in or register to get started.</p>
+        <a href="login.html" class="btn btn-primary">Log In</a>
+        <a href="register.html" class="btn btn-secondary">Register</a>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">{{ myresult }}</h3>
+        </div>
+    </div>
+{% endblock %}

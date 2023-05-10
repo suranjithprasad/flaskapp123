@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="center text-center p3">
+<h3>Save your details</h3>
+    <h1>Register is done</h1>
+    <h1>your details</h1>
+    <table align="center" border="2">
+        <tr>
+            <td>Name</td>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>hidden</td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>hidden</td>
+        </tr>
+    </table>
+    <h1> back to <a class="link" href="/login">Login</a> page</h1>
+</div>
+
+{% endblock %}

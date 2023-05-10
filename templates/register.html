@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-md-4 col-sm-12 mx-auto">
+    <h1 class="text-center mb-4">Register in EGO</h1>
+    <form action="/registerdone" method="post" class="bg-danger p-3">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
