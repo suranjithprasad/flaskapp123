@@ -8,18 +8,19 @@ app.debug = True
 app.config['MYSQL_DATABASE_USER'] = 'b512e6a78dbcb7'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'b429118c'
 app.config['MYSQL_DATABASE_DB'] = 'heroku_a1e2684e12fa937'
-app.config['MYSQL_DATABASE_HOST'] = 'uus-cdbr-east-06.cleardb.net'
+app.config['MYSQL_DATABASE_HOST'] = 'us-cdbr-east-06.cleardb.net'
 
 # Set the secret key for session management
 app.secret_key = 'your_secret_key'
 
 # Create a connection to the MySQL database
-    mydb = mysql.connector.connect(
-        host=app.config['MYSQL_DATABASE_HOST'],
-        user=app.config['MYSQL_DATABASE_USER'],
-        password=app.config['MYSQL_DATABASE_PASSWORD'],
-        database=app.config['MYSQL_DATABASE_DB']
-    )
+mydb = mysql.connector.connect(
+    host=app.config['MYSQL_DATABASE_HOST'],
+    user=app.config['MYSQL_DATABASE_USER'],
+    password=app.config['MYSQL_DATABASE_PASSWORD'],
+    database=app.config['MYSQL_DATABASE_DB']
+)
+
 
 @app.route('/')
 def index():
