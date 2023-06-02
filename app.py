@@ -23,6 +23,7 @@ mydb = mysql.connector.connect(
 )
 
 
+
 @app.route('/')
 def index():
     mytable = mydb.cursor()
